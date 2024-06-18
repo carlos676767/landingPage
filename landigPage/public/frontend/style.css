@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+
+    background: url("img/fundo.png") lightgray 50% / cover no-repeat;
+    filter: brightness(0.5);
+}
+
+input {
+    width: 307px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #D9D9D9;
+    background: #FFF;
+    padding: 2px;
+    outline: none;
+    border: 2px solid #1AE3BF;
+}
+
+
+.textInicial {
+    color: #FFF;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+    font-weight: bolder;
+    outline: none;
+}
+
+.vendedor {
+    flex-shrink: 0;
+
+}
+
+button {
+    width: 100%;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #1AE3BF;
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+input::placeholder{
+    color: #000;
+      font-family: "Inter", sans-serif;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.textDigital {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400PX;
+    line-height: normal;
+    color: #FFF;
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
