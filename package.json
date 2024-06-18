@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",
+    "csv-writer": "^1.6.0",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jest": "^29.7.0",

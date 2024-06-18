@@ -1,37 +1,32 @@
 const buttom = document.querySelector("button");
+const inputs = document.querySelectorAll("input");
 const pegarDadosInputs = () => {
-  const inputs = document.querySelectorAll("input");
   const nome = inputs[0].value.trim();
   const email = inputs[1].value.trim();
-  return { nome, email };
+  return { nome, email};
 };
 
 const validarDados = (dados) => {
   return dados.email == "" && dados.nome == "";
 };
 
-const validarEmail = (dados) => {
-  const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  if (regex.test(dados.email)) {
-    alert("digite um email valido");
-  }
+const mudarBordaInput = () => {
+  const msg = document.querySelector(".msg")
+  inputs[1].classList.add("classRed");
+  inputs[0].classList.add("classRed");
+  msg.innerHTML = 'Preencha os inputs  com os  valores para participar <br> do nosso mega evento.'
+  setTimeout(() => {
+    inputs[0].classList.remove("classRed");
+    inputs[1].classList.remove("classRed");
+    msg.innerHTML = ""
+  }, 3000);
 };
 
-const mudarBordaInput = (dados) => {
-  const msg = document.querySelector(".msg")
-  dados.email.classlist.add("classRed");
-  dados.nome.classlist.add("classRed");
-  msg.innerHTML = 'Preencha os inputs com os valores para participar do nosso mega evento'
-  setTimeout(() => {
-    dados.email.classlist.remove("classRed");
-    dados.nome.classlist.remove("classRed");
-  }, 5000);
-};
 
 const enviarDados = async () => {
   const dados = pegarDadosInputs();
   if (validarDados(dados)) {
-  mudarBordaInput(dados)
+  mudarBordaInput()
   } else {
     try {
       const httpRequest = await fetch("http://localhost:8080/postDados", {
