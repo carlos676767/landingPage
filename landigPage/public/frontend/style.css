@@ -57,13 +57,13 @@ button {
     font-size: 15px;
 }
 
-input::placeholder{
+input::placeholder {
     color: #000;
-      font-family: "Inter", sans-serif;
-font-size: 12px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .textDigital {
@@ -81,4 +81,9 @@ line-height: normal;
     justify-content: center;
     align-items: center;
     gap: 6px;
+}
+
+
+.classRed {
+    border:2px  solid red;
 }

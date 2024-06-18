@@ -29,13 +29,15 @@ const databaseConnect = async(name, email) => {
   try {
     const connect = await nano.db.use("planilha")
     const add = await connect.insert({nome: name, email: email})
-    console.log('dados sucess');
+    console.log('DATABASE FROM CSDEV NEW DADOS');
   } catch (error) {
     console.log(error);
   }
 }
 
+
 const port = 8080;
 api.listen(port, () => {
   console.log(`servidor rodando na porta ${port}`);
 });
+
