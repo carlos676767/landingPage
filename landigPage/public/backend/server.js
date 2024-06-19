@@ -3,7 +3,7 @@ const api = express();
 const bodyParser = require("body-parser");
 const renderCsv = require("./csv");
 const path = require("path")
-require('dotenv').config()
+require('dotenv').config({path: "../backend/app.env"})
 const nano = require('nano')(`http://${process.env.NAME}:${process.env.NAME}@localhost:5984`)
 api.use(bodyParser.json())
 const cors = require("cors")
@@ -11,12 +11,12 @@ api.use(cors())
 api.get("/planilha", async(res, data) => {
   try {
     const obterCaminho = path.basename("/landigPage/public/backend/planilha.csv")
-    console.log(obterCaminho);
     data.send({ status: 200, msg: "resent data", dados: "/landigPage/public/backend/planilha.csv"  }).status(200);
   } catch (error) {
     data.send({ status: 404, msg: "Erro 404 Not Found" }).status(404);
   }
 });
+
 
 api.post("/postDados", async(res, data) => {
   try {
