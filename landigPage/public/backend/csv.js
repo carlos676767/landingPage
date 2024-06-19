@@ -1,20 +1,16 @@
 const createCsvWriter = require("csv-writer").createObjectCsvWriter;
-const csvWriter = createCsvWriter({
-  path: 'file.csv',
-  header: [
-    {id: 'name', title: 'NOME'},
-    {id: 'email', title: "EMAIL"}
-  ]
-});
 
-const records = [
-  {name: 'Bob', email: 'll@gmail.com'},
-  {name: 'Bob', email: 'll@gmail.com'},
-  {name: 'Bob', email: 'll@gmail.com'},
-];
+async function renderCsv(nome, email) {
+  const records = await [{ name: nome, email: email }];
+  const csvWriter = await createCsvWriter({
+    path: "planilha.csv",
+    header: [
+      { id: "name", title: "NOME" },
+      { id: "email", title: "EMAIL" },
+    ],
+    append: true
+  });
+  await csvWriter.writeRecords(records);
+}
 
-
-
-csvWriter.writeRecords(records).then(() => {
-  console.log("...Done");
-});
+module.exports = renderCsv;

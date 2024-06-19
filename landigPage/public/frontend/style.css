@@ -83,6 +83,33 @@ input::placeholder {
     gap: 6px;
 }
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 198px;
+}
+
+.fundoCod {
+    background-image: url("img/pexels-photo-1072179.jpeg");
+    width: 100%;
+    height: 198px;
+    flex-shrink: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1447px;
+    height: 198px;
+    background: linear-gradient(to right, rgba(23, 152, 112, 0), #179870);
+ 
+}
+
 
 .classRed {
     border:2px  solid red;
