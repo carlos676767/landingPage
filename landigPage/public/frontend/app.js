@@ -29,7 +29,7 @@ const enviarDados = async () => {
   mudarBordaInput()
   } else {
     try {
-      const httpRequest = await fetch("http://localhost:8080/postDados", {
+      const httpRequest = await fetch("http://localhost:9090/postDados", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ nome: dados.nome, email: dados.email }),

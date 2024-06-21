@@ -2,7 +2,7 @@ const btnBaixar = document.querySelector("button")
 
 const baixarPlanilha = async () => {
     try {
-        const data = await fetch("http://localhost:8080/planilha")
+        const data = await fetch("http://localhost:9090/planilha")
         const res = await data.json()
         const { dados } = res
         const a = document.createElement('a')

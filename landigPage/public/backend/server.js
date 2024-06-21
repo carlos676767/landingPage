@@ -9,6 +9,8 @@ api.use(bodyParser.json())
 const cors = require("cors");
 const enviarEmail = require("./email/email");
 api.use(cors())
+
+
 api.get("/planilha", async(res, data) => {
   try {
     const obterCaminho = path.basename("/landigPage/public/backend/planilha.csv")
@@ -34,12 +36,11 @@ const databaseConnect = async() => {
   return connect
 }
 
-async function newDadosDataBase(name, email) {
+async function newDadosDataBase(name, email, callback) {
   try {
     const database = await databaseConnect()
     const dadosDatabase = await database.insert({nome: name, email: email})
     enviarEmail(email)
-    console.log('new dados'); 
     searchDados()
   } catch (error) {
     console.log(error);
@@ -55,6 +56,7 @@ async function searchDados() {
       const idFromData = await (await database).get(id)
       const {nome, email} = idFromData
       await renderCsv(nome,email)
+
     })
   } catch (error) {
     console.log(error);
@@ -63,7 +65,7 @@ async function searchDados() {
 
 
 
-const port = 8080;
+const port = 9090;
 api.listen(port, () => {
   console.log(`servidor rodando na porta ${port}`);
 });
