@@ -146,14 +146,7 @@ gap: 10px;
     width: 500px;
 }
 
-h2{
-    color: #1AE3BF;
-font-family:  "Inter", sans-serif;
-font-size: 24px;
-font-style: normal;
-font-weight: 900;
-line-height: normal;
-}
+
 main{
     display: flex;
     justify-content: center;
@@ -161,6 +154,33 @@ main{
   
 }
 
+section{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+
+.textExplicando{
+    color: #FFF;
+font-family: serif 'Inter';
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 150px;
+
+}
+
+
+
+footer{
+    width: 1440px;
+height: 275px;
+flex-shrink: 0;
+
+background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(217, 217, 217, 0.00) 47.25%);
+}
 
 @media(max-width: 768px){
  
@@ -195,5 +215,10 @@ main{
 
     .vendedor{
         display: none;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
     }
 }
