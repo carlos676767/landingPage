@@ -114,3 +114,86 @@ input::placeholder {
 .classRed {
     border:2px  solid red;
 }
+
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+background-color: #000;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    flex: 1;
+    margin: 5px;
+    border-radius: 50px 50px 0px 50px;
+border: 1px solid #1AE3BF;
+background: #000;
+
+gap: 10px;
+}
+
+
+.homem{
+    width: 500px;
+}
+
+h2{
+    color: #1AE3BF;
+font-family:  "Inter", sans-serif;
+font-size: 24px;
+font-style: normal;
+font-weight: 900;
+line-height: normal;
+}
+main{
+    display: flex;
+    justify-content: center;
+
+  
+}
+
+
+@media(max-width: 768px){
+ 
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .centro{
+        width: 90%;
+        margin-top: auto;
+    }
+    input{
+        width: 100%;
+    }
+
+    .textDigital{
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+
+    }
+    .textInicial{
+        flex-wrap: wrap;
+    }
+    br{
+        display: none;
+    }
+
+    .vendedor{
+        display: none;
+    }
+}

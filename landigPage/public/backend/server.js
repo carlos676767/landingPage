@@ -13,8 +13,8 @@ api.use(cors())
 
 api.get("/planilha", async(res, data) => {
   try {
-    const obterCaminho = path.basename("/landigPage/public/backend/planilha.csv")
-    data.send({ status: 200, msg: "resent data", dados: "/landigPage/public/backend/planilha.csv"  }).status(200);
+    const diretorio = path.join(__dirname, 'planilha.csv')
+    data.download(diretorio)
   } catch (error) {
     data.send({ status: 404, msg: "Erro 404 Not Found" }).status(404);
   }
